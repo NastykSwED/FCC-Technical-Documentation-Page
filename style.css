@@ -1,0 +1,130 @@
+:root{
+    --black:#000;
+    --white:#fff;
+    --grey:#4d4e53;
+    --grey-transparent:rgba(0, 22, 22, 0.4);
+    --code-bg:#f7f7f7;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.wrapper{
+    display: flex;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    padding: 20px 0 ;
+    border-right: 3px solid var(--grey-transparent);
+}
+
+#navbar header{
+    text-align: center;
+}
+
+#navbar header h1{
+    padding: 0 0 20px 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+#navbar ul{
+    list-style: none;
+}
+
+#navbar ul li{
+    border-top: 1px solid var(--black);
+}
+
+#navbar ul li a{
+    display: block;
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+#main-doc{
+    padding: 35px 20px 20px 20px;
+    margin-left: 320px;
+}
+
+.main-section{
+    margin-bottom: 24px;
+}
+
+.main-section header{
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+}
+
+article{
+    margin: 15px;
+    color: var(--grey);
+}
+
+article p{
+    margin: 1rem 0;
+    line-height: 1.55;
+}
+
+article ul{
+    padding: 0 4rem;
+}
+
+article ul li{
+    margin: 1rem 0;
+    line-height: 1.55;
+}
+
+
+code{
+    display: block;
+    padding: 1rem 2rem;
+    background-color: var(--code-bg);
+    text-align: left;
+    white-space: pre-line;
+    line-height: 2.5;
+    border-radius: 5px;
+}
+
+
+@media (max-width:800px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navbar{
+        position: absolute;
+        width: 100%;
+        max-height: 280px;
+        border-bottom: 2px solid var(--black);
+        z-index: 1;
+    }
+
+    #main-doc{
+        margin-top: 285px;
+        margin-left: 0;
+    }
+
+    #navbar ul{
+        max-height: 200px;
+        border-top: 2px solid var(--black);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
